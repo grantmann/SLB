@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ReportDate: 2017-10-17
+  LenderName: MyString
+  Sharecode: MyString
+  QuantityAvailable: 
+  FeeRate: 9.99
+
+two:
+  ReportDate: 2017-10-17
+  LenderName: MyString
+  Sharecode: MyString
+  QuantityAvailable: 
+  FeeRate: 9.99

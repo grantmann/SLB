@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reportdate:</strong>
+  <%= @lender.ReportDate %>
+</p>
+
+<p>
+  <strong>Lendername:</strong>
+  <%= @lender.LenderName %>
+</p>
+
+<p>
+  <strong>Sharecode:</strong>
+  <%= @lender.Sharecode %>
+</p>
+
+<p>
+  <strong>Quantityavailable:</strong>
+  <%= @lender.QuantityAvailable %>
+</p>
+
+<p>
+  <strong>Feerate:</strong>
+  <%= @lender.FeeRate %>
+</p>
+
+<%= link_to 'Edit', edit_lender_path(@lender) %> |
+<%= link_to 'Back', lenders_path %>
