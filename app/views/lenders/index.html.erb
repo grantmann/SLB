@@ -2,7 +2,7 @@
 
 <h1>Availability Dashboard</h1>
 
-<table border="1">
+<table>
   <thead>
     <tr>
       <th>Report Date</th>
@@ -16,15 +16,19 @@
 
   <tbody>
     <% @lenders.each do |lender| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= lender.ReportDate %></td>
         <td><%= lender.LenderName %></td>
         <td><%= lender.Sharecode %></td>
         <td><%= lender.QuantityAvailable %></td>
         <td><%= lender.FeeRate %></td>
-        <td><%= link_to 'Show', lender %></td>
-        <td><%= link_to 'Edit', edit_lender_path(lender) %></td>
-        <td><%= link_to 'Delete', lender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="list_actions">
+        <%= link_to 'Show', lender %>
+        <%= '  ' %>
+        <%= link_to 'Edit', edit_lender_path(lender) %>
+        <%= '  ' %>
+        <%= link_to 'Delete', lender, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
       </tr>
     <% end %>
   </tbody>
